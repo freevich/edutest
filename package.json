@@ -1,0 +1,44 @@
+{
+  "name": "edutest",
+  "version": "1.0.0",
+  "description": "Creating educational test from arbitrary text",
+  "main": "mainApp.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freevich/edutest.git"
+  },
+  "author": "Oleg F oganesyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freevich/edutest/issues"
+  },
+  "homepage": "https://github.com/freevich/edutest#readme",
+  "dependencies": {
+    "backbone": "^1.5.0",
+    "backbone.marionette": "^4.1.3",
+    "git": "^0.1.5",
+    "gulp": "^4.0.2",
+    "html-webpack-plugin": "^5.5.3",
+    "jquery": "^3.7.1",
+    "jslint": "^0.12.1",
+    "marionette": "^5.0.0-alpha.2",
+    "path": "^0.12.7",
+    "requirejs": "^2.3.6",
+    "underscore": "^1.13.6",
+    "watch-js": "^0.0.7"
+  },
+  "devDependencies": {
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
