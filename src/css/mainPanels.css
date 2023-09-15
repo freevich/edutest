@@ -12,6 +12,7 @@ body {
     width: 			100%;
     height: 		100%;
 	background: transparent;
+	display:		none;
 	
 }
 
@@ -29,10 +30,10 @@ body {
 	position:		relative;
 	text-align: 	left;
 	padding-top: 	7px;
-	margin-left: 	50px;
+	margin-left: 	70px;
 	/*vertical-align: top;*/
 	color:			#888;
-	font-size: 		2.6rem;
+	font-size: 		2.2rem;
 	font-family: 	"Felix Titling";/* 'Handlee', cursive*/
 	text-shadow: 	1px 1px 2px #888, 0 0 1.2em #333; /* Параметры тени */
 }
@@ -64,11 +65,11 @@ body {
 .leftPanel{
 	position:		relative;
 	left:			12px;
-	top: 			10%;
+	top: 			12%;
 	bottom: 10%;
 	width:			6%;
 	min-width:      70px;
-	height:			12%;
+	height:			11%;
 	z-index: 		50;
 	border: 1px solid #222;
 	background: transparent;
@@ -76,20 +77,6 @@ body {
 	-webkit-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
 	-moz-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
 	box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
-
-
-	/*
-	background-color: #CDCDCD;
-	
-	border-bottom: 1px solid #999999;
-    border-right:   1px solid #999999;
-    border-left:    1px solid #EEEEEE;
-    border-top:     1px solid #EEEEEE;
-
-	-webkit-box-shadow: rgba(100,100,100,0.3) 3px 3px 2px;
-   	-moz-box-shadow: rgba(100,100,100,0.3) 3px 3px 2px;
-   	box-shadow: rgba(100,100,100,0.3) 3px 3px 2px;
-	*/
 }
 
 /**/
@@ -97,6 +84,18 @@ body {
 	-webkit-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
 	-moz-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
 	box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.leftPanelLetter{
+	position:		relative;
+	text-align: 	center;
+	padding-top: 	9%;
+	margin-left: 	5%;
+	/*vertical-align: top;*/
+	color:			#888;
+	font-size: 		4.8rem;
+	font-family: 	"Felix Titling";/* 'Handlee', cursive*/
+	text-shadow: 	1px 1px 2px #888, 0 0 1.2em #333; /* Параметры тени */
 }
 
 .footer {
