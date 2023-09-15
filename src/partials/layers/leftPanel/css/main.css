@@ -1,0 +1,101 @@
+
+.leftPanelButContainer {
+	position:		relative;
+	top: 			3px;
+    left: 			0%;
+    width: 			92%;
+    height: 		100%;
+    margin:			1px auto;
+    z-index:		50;
+    /*
+    border:			1px solid blue;
+    
+    border-right:	1px solid #AF1318;
+    
+    background:		#EEEEEE;
+    */
+}
+.left{
+	float : 		left;
+	margin-top:		1px;
+    margin-left:    3px;
+    padding-top: 	3px;
+}
+
+.right{
+	float : 		right;
+	margin-top:		1px;
+    margin-right:   3px;
+    padding-top: 	4px;
+}
+
+.button {
+	position: 		relative;
+	top: 			2px;
+    width: 			49%;
+   	margin:			0 auto;
+    
+    height: 		100%;
+    min-height:		30px;
+    text-align:		center;
+    vertical-align: middle;
+    color:			#333333;
+    
+    /*	*/
+   font-family: Georgia, serif;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+   
+    border-top: 1px solid #c6c6c6;
+   	background: #a4a4a4;
+   	background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d4d4d4));
+   	background: -webkit-linear-gradient(top, #e6e6e6, #d4d4d4);
+   	background: -moz-linear-gradient(top, #e6e6e6, #d4d4d4);
+   	background: -ms-linear-gradient(top, #e6e6e6, #d4d4d4);
+   	background: -o-linear-gradient(top, #e6e6e6, #d4d4d4);
+
+   	-webkit-border-radius: 5px;
+   	-moz-border-radius: 5px;
+   	border-radius: 5px;
+   	-webkit-box-shadow: rgba(0,0,0,0.6) 0 1px 0;
+   	-moz-box-shadow: rgba(0,0,0,0.6) 0 1px 0;
+   	box-shadow: rgba(0,0,0,1,0.6) 0 1px 0;
+   
+   	/*text-shadow: rgba(0,0,0,.4) 0 1px*/ 
+}
+.buttonRow {
+    position:       	relative;
+    height:         	6%;
+	margin: 			2px auto;
+	margin-top:       	3px;
+	padding-top:       	3px;
+}
+
+.button:hover {
+   	border-top-color: #c9c9c9;
+   	background: #c9c9c9;
+   	color: #2e2d2e;
+   	cursor: pointer;
+   }
+.button:active {
+    border-top-color: #99a0a3;
+   	background: #99a0a3;
+   }
+
+.buttonName {
+	position:		relative;
+	top: 			20%;
+	font: bold 0.7em/1em 'Lucida Grande', Helvetica, Arial, Sans-Serif;/**/
+}
+
+.button img{
+	position:		relative;
+	top: 			9%;
+	float:			left;
+	margin-left:	5%;
+	height: 		80%;
+	/*
+	border:			1px solid #AF1318;
+	border-radius: 	50%;
+	*/
+}

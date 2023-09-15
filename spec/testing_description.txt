@@ -1,0 +1,132 @@
+Testing is an important part of JavaScript.
+
+In this article, we’ll look at getting started with Jasmine.
+
+Using Jasmine with Node
+We can add Jasmine to our Node project by running:
+
+npm install --save-dev jasmine
+This will install a local copy of Jasmine for our project.
+
+We can also install it globally by running:
+
+npm install -g jasmine
+Then we can initialize the Jasmine project by running:
+
+jasmine init
+if we installed Jasmine globally.
+
+If we didn’t we run:
+
+npx jasmine init
+Then we generate the spec and source files by running:
+
+jasmine examples
+Then we can change the configuration in spec/support/jasmine.json /
+
+The spec_dir property is the directory with the test files.
+
+spec_file has the patterns for the spec files.
+
+helpers have the paths for the helpers for the test files.
+
+stopSpecOnExpectationFailure is a boolean that indicates whether we want to stop running tests when a test fails.
+
+random means whether we run specs in a semi-random order.
+
+We can run tests with:
+
+jasmine spec/appSpec.js
+where spec/appSpec.js is the path.
+
+We can also specify a pattern for the path of the tests;
+
+jasmine "**/tests/**/*Spec.js"
+CLI Options
+We can change the options by setting some config.
+
+For instance, we can write:
+
+JASMINE_CONFIG_PATH=spec/config/jasmine.json jasmine
+
+jasmine --config=spec/config/jasmine.json
+We can disable colors with the --no-color flag.
+
+--filter lets us specs that match a given string.
+
+--stop-on-failure lets us stop running tests on first failure if it’s true .
+
+--random tells Jasmine to run tests in semi-random order.
+
+--seed lets us set the randomization seed if randomization is turned on.
+
+--reporter lets us set the test reporter.
+
+We can also use the jasmine library to set the config.
+
+For instance, we can write:
+
+const Jasmine = require('jasmine');
+const jasmine = new Jasmine();
+jasmine.loadConfigFile('spec/support/jasmine.json');
+jasmine.loadConfig({
+  spec_dir: 'spec',
+  spec_files: [
+    'appSpec.js',
+    'requests/**/*[sS]pec.js',
+    'utils/**/*[sS]pec.js'
+  ],
+  helpers: [
+    'helpers/**/*.js'
+  ]
+});
+to set the config.
+
+We can also set our own onComplete callback to do what we want is all tests pass or when they fail:
+
+jasmine.onComplete(function(passed) {
+  if (passed) {
+    console.log('passed');
+  } else {
+    console.log('failed');
+  }
+});
+Reporters
+We can set the test reports.
+
+The default is the ConsoleReporter.
+
+We can set the reporter by writing:
+
+jasmine.configureDefaultReporter({
+  timer: new jasmine.jasmine.Timer(),
+  print(...args) {
+    process.stdout.write(args);
+  },
+  showColors: true
+});
+to change how test results are reported.
+
+Run Tests
+To run tests, we run the execute method:
+
+jasmine.execute();
+We can also pass in a file name or spec name to run them:
+
+jasmine.execute(['fooSpec.js'], 'a spec name');
+So we can write:
+
+const Jasmine = require('jasmine');
+const jasmine = new Jasmine();
+
+jasmine.loadConfigFile('spec/support/jasmine.json');
+jasmine.configureDefaultReporter({
+  showColors: false
+});
+jasmine.execute();
+to run our tests.
+
+Conclusion
+We can use Jasmine to run our tests.
+
+There’re many options we can set, like the files to run, whether to show colors or not, randomize tests, etc.

@@ -1,12 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack'); //to access built-in plugins
-//const __dirname = "./"
+//const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+const webpack = require('webpack'); //to access built-in plugins
+//const outputDirectory = './dist';
+//
 module.exports = {
-    entry: './mainApp.js',
+    entry: '/src/mainApp.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
     },
     module: {
@@ -14,10 +16,17 @@ module.exports = {
             { test: /\.txt$/, use: 'raw-loader' },
             { test: /\.svg$/, use: 'svg-inline-loader' },
             { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
-            { test: /\.(js)$/, use: 'babel-loader' }
+            { test: /\.js$/, use: 'babel-loader' },
             ],
     },
-    plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+    plugins: [
+        new HtmlWebpackPlugin(
+            { template: 'index.html',
+              favicon: 'favicon.ico'
+            }),
+        //new CleanWebpackPlugin(),
+
+    ],
     mode: 'development',//production, development, none
     optimization: {
         //runtimeChunk: 'single',
@@ -27,4 +36,15 @@ module.exports = {
         ignored: /node_modules/,
         poll: 1000, // Проверяем изменения каждую секунду
     },
+    devServer: {
+        port: 3000,
+        open: true,
+        proxy: {
+            '/api': 'http://localhost:8080'
+        },
+        historyApiFallback: true,
+        //contentBase: './dist/index.html',
+        hot: true
+    },
+
 };
