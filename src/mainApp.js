@@ -15,7 +15,10 @@ import '/src/js/basicFiles/please.js';
 import '/src/js/myFiles/init.js';
 import '/src/js/myFiles/init.js';
 
-
+import '/src/fonts/AlanisHand.ttf';
+//import '/src/fonts/Pecita.otff';
+import '/src/fonts/rusty-cellair.ttf';
+import '/src/fonts/Sacramento-Regular.ttf';
 
 
 console.log("mainApp.js has started!");

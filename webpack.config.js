@@ -17,6 +17,20 @@ module.exports = {
             { test: /\.svg$/, use: 'svg-inline-loader' },
             { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
             { test: /\.js$/, use: 'babel-loader' },
+            //
+            {
+                test: /\.ttf$/i,
+                type: 'asset/resource',
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'dist/fonts/'
+                        }
+                    }
+                ],
+            }
             ],
     },
     plugins: [
