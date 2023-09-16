@@ -9,7 +9,6 @@ $(document).ready(function(){
         $("div.mainContainer").css('display', 'block');
         //$("#top").off();
     });
-
     //this fragment is for blinking square in top left header panel
     //
     var colors = [

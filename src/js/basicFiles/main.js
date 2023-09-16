@@ -23,7 +23,7 @@ ns.leftPanel.buttons               = {};
 ns.leftPanel.tabs                  = {};
 //
 ns.leftPanel.buttons.url           = "";
-ns.leftPanel.tabs.url              = "../src/partials/layers/leftPanel/templates/tabsLeftPanelTmpl.html";
+ns.leftPanel.tabs.url              = "../src/partials/layers/leftPanel/templates/leftPanelButtonTmpl.html";
 ns.leftPanel.tabs.data             = null;
 ns.leftPanel.buttons.data          = null;
 ns.leftPanel.tabs.promise          = null;
