@@ -19,6 +19,11 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+        <!--Imports a model-viewer JavaScript code -->
+        <!--It helps to handle how the 3D Object would be displayed -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
     </head>
     <body id="top">
         <div id="mainContainer" class="mainContainer">
@@ -32,50 +37,55 @@
             </label>
 
             <div class="basicTopPanel">
-                <div class="basicButton">
-                    <label class="basicButtonLetter">
+                <div class="basicTopButton">
+                    <label class="basicTopButtonLetter">
                         A
                     </label>
                 </div>
-                <div class="basicButton" style="left: 8.5%;">
-                    <label class="basicButtonLetter">
+                <div class="basicTopButton" style="left: 8.5%;">
+                    <label class="basicTopButtonLetter">
                         B
                     </label>
                 </div>
-                <div class="basicButton" style="left: 16%;">
-                    <label class="basicButtonLetter">
+                <div class="basicTopButton" style="left: 16%;">
+                    <label class="basicTopButtonLetter">
                         C
+                    </label>
+                </div>
+                <div class="basicTopButton" style="left: 23.5%;">
+                    <label class="basicTopButtonLetter">
+                        D
                     </label>
                 </div>
             </div>
 
         </div>
             <div class="leftButton" >
-                <label class="leftButtonLetter">
+                <label id="buttonText" class="leftButtonLetter">
                     T<span style="font-size: 1rem; margin-left: -5px;">ext</span>
                 </label>
             </div><!-- EOF leftButton-->
-            <div class="leftButton" style="top: 14%;">
+            <div id="buttonEdit" class="leftButton" style="top: 14%;">
                 <label class="leftButtonLetter">
                     E<span style="font-size: 1rem; margin-left: 4px;">dit</span>
                 </label>
             </div><!-- EOF leftButton-->
-            <div class="leftButton" style="top: 16%;">
+            <div id="buttonAI" class="leftButton" style="top: 16%;">
                 <label class="leftButtonLetter">
                     A<span style="font-size: 2rem; margin-left: 2px;">i</span>
                 </label>
             </div><!-- EOF leftButton-->
-            <div class="leftButton" style="top: 18%;">
+            <div id="buttonTools" class="leftButton" style="top: 18%;">
                 <label class="leftButtonLetter">
                     T<span style="font-size: 1rem; margin-left: -5px;">ools</span>
                 </label>
             </div><!-- EOF leftButton-->
-            <div class="leftButton" style="top: 20%;">
+            <div id="buttonSave" class="leftButton" style="top: 20%;">
                 <label class="leftButtonLetter">
                     S<span style="font-size: 1rem; margin-left: 5px;">ave</span>
                 </label>
             </div><!-- EOF leftButton-->
-            <div class="leftButton" style="top: 22%;">
+            <div id="buttonFile" class="leftButton" style="top: 22%;">
                 <label class="leftButtonLetter">
                     F<span style="font-size: 1rem; margin-left: -5px;">ile</span>
                 </label>

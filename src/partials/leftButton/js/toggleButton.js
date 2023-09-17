@@ -1,5 +1,5 @@
 /**
- * @author ooganesy
+ * @author ooganesyan
  */
 import jQuery from "jquery";
 const $ = jQuery;

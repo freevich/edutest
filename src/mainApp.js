@@ -1,9 +1,13 @@
+/**
+ *@author ooganesyan
+ *
+ */
 //
 //Libs
 import  'backbone';
 import _, { map } from 'underscore';
 import 'jquery';
-import fs from "fs";
+//import fs from "fs";
 // import { View } from 'backbone';
 // import { Module } from 'backbone';
 //

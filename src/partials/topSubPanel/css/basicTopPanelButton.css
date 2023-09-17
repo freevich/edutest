@@ -1,6 +1,10 @@
-/*   LEFT PANEL ITEMS*/
+/**
+ *@author ooganesyan
+ *
+ */
 
-.basicButton{
+/*   LEFT PANEL ITEMS*/
+.basicTopButton{
     position:		absolute;
     left:			1%;
     top: 			4%;
@@ -17,13 +21,13 @@
 }
 
 /**/
-.basicButton:hover{
+.basicTopButton:hover{
     -webkit-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
-.basicButtonLetter{
+.basicTopButtonLetter{
     position:		relative;
     text-align: 	center;
     padding-top: 	0%;
