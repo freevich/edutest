@@ -1,6 +1,7 @@
 //
 import jQuery from "jquery";
 const $ = jQuery;
+import createUUID from  '/src/utils/generateGUID.js';
 //
 $(document).ready(function(){
     //
@@ -38,4 +39,7 @@ $(document).ready(function(){
             $(this).css({ 'background-color': Please.make_color() });
         });
     },1500);
+
+    console.log('Here is created GUID: '+createUUID());
+
 });//EOF ready

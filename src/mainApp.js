@@ -7,6 +7,8 @@
 import  'backbone';
 import _, { map } from 'underscore';
 import 'jquery';
+//import 'model-viewer';
+import 'three';
 //import fs from "fs";
 // import { View } from 'backbone';
 // import { Module } from 'backbone';
@@ -26,6 +28,7 @@ import '/src/js/basicFiles/main.js';
 import '/src/js/basicFiles/please.js';
 import '/src/partials/colorBar/js/init.js';
 import '/src/partials/leftButton/js/toggleButton.js';
+import  '/src/utils/generateGUID.js';
 //
 //Fonts
 import '/src/fonts/AlanisHand.ttf';
