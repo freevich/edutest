@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const webpack = require('webpack'); //to access built-in plugins
 //const outputDirectory = './dist';
@@ -17,28 +17,68 @@ module.exports = {
             { test: /\.svg$/, use: 'svg-inline-loader' },
             { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
             { test: /\.js$/, use: 'babel-loader' },
+            { test: /\.pdf$/, use: 'raw-loader' },
             //
             {
-                test: /\.ttf$/i,
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+                // More information here https://webpack.js.org/guides/asset-modules/
+                type: "asset/resource",
+            },
+            // {
+            //     test: /\.ttf$/i,
+            //     type: 'asset/resource',
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: '/fonts/'
+            //             }
+            //         }
+            //     ],
+            //
+            // },
+            // {
+            //     test: /\.(pdf|txt)$/,
+            //     include: path.resolve(__dirname, "src"),
+            //     type: "asset/resource",
+            //     // generator: {
+            //     //     filename: "./src/data/pdfFiles/[name][ext]",
+            //     // }
+            // },
+            // {
+            //     test: /\.(png|jp(e*)g|gif)$/,
+            //     exclude: /node_modules/,
+            //     use: [{
+            //         loader: 'url-loader',
+            //         options: {
+            //             limit: 10000,
+            //             publicPath: "/img"
+            //         }
+            //     }]
+            // },
+            {
+                test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
                 type: 'asset/resource',
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'dist/fonts/'
-                        }
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]'
                     }
-                ],
+                }]
             }
-            ],
+
+
+        ],
+
+
     },
     plugins: [
         new HtmlWebpackPlugin(
             { template: 'index.html',
               favicon: 'favicon.ico'
             }),
-        //new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
 
     ],
     mode: 'development',//production, development, none

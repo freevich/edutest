@@ -6,12 +6,21 @@
 //Libs
 import  'backbone';
 import _, { map } from 'underscore';
+import {Collection, Model, View} from 'backbone';
+//import {LocalStorage} from 'backbone.localstorage';
 import 'jquery';
-//import 'model-viewer';
+//import 'pdfjs';
 import 'three';
-//import fs from "fs";
+// import fs from "fs";
 // import { View } from 'backbone';
 // import { Module } from 'backbone';
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
+Splitting();
+//
+//import 'mini-css-extract-plugin';
+//import  'image-minimizer-webpack-plugin';
 //
 //CSS
 import '/src/css/main.css';
@@ -22,18 +31,32 @@ import '/src/partials/colorBar/css/colorBar.css';
 import '/src/partials/leftButton/css/leftButton.css';
 import '/src/partials/topSubPanel/css/basicTopPanel.css';
 import '/src/partials/topSubPanel/css/basicTopPanelButton.css';
+import '/src/partials/centralPanel/css/centralPanelsStyles.css'
 //
 //JS
 import '/src/js/basicFiles/main.js';
 import '/src/js/basicFiles/please.js';
-import '/src/partials/colorBar/js/init.js';
+import '/src/partials/colorBar/js/initColor.js';
 import '/src/partials/leftButton/js/toggleButton.js';
-import  '/src/utils/generateGUID.js';
+import '/src/utils/GUID/generateGUID.js';
+import '/src/js/websockets/initWebSocket.js';
+import '/src/js/webworkers/initWebWorker';
+import '/src/partials/leftButton/models/leftButtonModel.js';
+import '/src/partials/leftButton/views/leftButtonView.js';
+
+
+
 //
 //Fonts
 import '/src/fonts/AlanisHand.ttf';
 import '/src/fonts/rusty-cellair.ttf';
 import '/src/fonts/Sacramento-Regular.ttf';
+//
+//pdf
+//import "/src/data/pdfFiles/BenAlmanTheres_no_such_thing_as_a_JSON.pdf"
+//
+//imgs
+import '../src/img/merlin_118_80.png';
 
 
 console.log("mainApp.js has started!");

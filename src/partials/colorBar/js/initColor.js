@@ -1,13 +1,14 @@
 //
 import jQuery from "jquery";
 const $ = jQuery;
-import createUUID from  '/src/utils/generateGUID.js';
+import createUUID from '/src/utils/GUID/generateGUID.js';
 //
 $(document).ready(function(){
     //
     $('body#top').on("click", function() {
         //alert( "This will be displayed only once." );
         $("div.mainContainer").css('display', 'block');
+        $('#firstTitleSpan').css('display', 'none');
         //$("#top").off();
     });
     //this fragment is for blinking square in top left header panel

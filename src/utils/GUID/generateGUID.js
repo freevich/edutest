@@ -10,4 +10,4 @@ export default function createUUID() {
 
     var uuid = s.join("");
     return uuid;
-}
+};

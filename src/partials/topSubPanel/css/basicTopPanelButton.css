@@ -4,27 +4,28 @@
  */
 
 /*   LEFT PANEL ITEMS*/
-.basicTopButton{
-    position:		absolute;
-    left:			1%;
-    top: 			4%;
-    width:			6%;
-    min-width:      70px;
-    height:			90%;
-    z-index: 		50;
-    border: 1px solid #222;
-    background: rgba(50,50,50,.3);
+.basicTopButton {
+    position: absolute;
+    left:       10px;
+    top:        10px;
+    width:      60px;
+    min-width:  60px;
+    height:     60px;
+    min-height: 60px;
+    z-index:    50;
 
-    -webkit-box-shadow: 1px 4px 8px 0px rgba(54, 80, 80, 0.3) inset;
-    -moz-box-shadow: 1px 4px 8px 0px rgba(54, 80, 80, 0.3) inset;
-    box-shadow: 1px 4px 8px 0px rgba(54, 80, 80, 0.3) inset;
+    border: 1px solid #333;
+    background: transparent;
+    -webkit-box-shadow: 1px 4px 8px 0px rgba(47, 89, 119, 0.4) inset;
+    -moz-box-shadow: 1px 4px 8px 0px rgba(47, 89, 119, 0.4) inset;
+    box-shadow: 1px 4px 8px 0px rgba(47, 89, 119, 0.4) inset;
 }
-
 /**/
 .basicTopButton:hover{
-    -webkit-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border: 1px solid #830921;
+    -webkit-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.3);
+    -moz-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.3);
+    box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.3);
 }
 
 .basicTopButtonLetter{
@@ -33,7 +34,7 @@
     padding-top: 	0%;
     margin-left: 	5%;
     /*vertical-align: top;*/
-    color:			#888;
+    color:			#999;
     font-size: 		3.5rem;
     font-family: 	"Felix Titling";/* 'Handlee', cursive*/
     text-shadow: 	1px 1px 2px #888, 0 0 1.2em #333; /* Параметры тени */
