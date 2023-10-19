@@ -43,10 +43,6 @@
  scrollbar-base-color: #333;
  }
 
-::-webkit-scrollbar-track-piece  {
- background-color: #333;
-}
-
 .leftBottomPanel{
  position: absolute;
  width: 118px;
@@ -54,8 +50,8 @@
  top: 780px;
  left: 12px;
  border: 1px solid #333;
-z-index: 150;
- background-image: url('http://localhost:3000/src/img/merlin_118_80.png');
+ z-index: 160;
+ background-image: url('/src/img/merlin_118_80.png');
 }
 
 .farRightCentralPanel{
@@ -66,5 +62,4 @@ z-index: 150;
  left: 1570px;
  border: 1px solid #333;
  background: #111;
-
 }

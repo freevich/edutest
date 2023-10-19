@@ -1,0 +1,58 @@
+$(document).ready(function(){
+	//Here was specified all the GLOBALS
+	//-----------------------------
+	//GLOBALS
+	self.bbApp = { allModels 		: {},
+				   allViews 		: {},
+				   allEvents 		: {},
+				   allCollections	: {},
+				   allRouters		: {},
+				   allEvents		: {},
+				   allJsons			: {},
+				   allStates		: {},
+	};
+	//
+	//alert('init')
+	//
+	//-----------------------------
+	//CHECKING OUT FOR WEBSOCKET SUPPORT
+	var webSocketSupported = ('WebSocket' in self);
+	if(!webSocketSupported) {alert('WebSockets are NOT supported by your browser!')};
+	//
+	/*
+	var newSocket = new WebSocket('ws://echo.websocket.org/');//ws://localhost:8020/emptyBackboneBoilerplate
+	
+	newSocket.onopen = function(evt){alert('newSocket opened! And event type is : '+ evt.type)};
+	*/
+	//newSocket.open();
+	//
+    var mainContainer = '#mainContainer';//'#mainContainer'
+    var menuContainer = '#menuContainer';
+    var itemContainer = '#leftPanel';
+    //-----------------------------
+    var squizeeContainer = function  (event, nameOfContainer) {
+        //
+    	var param = '';
+    	event = event||window.event;
+    	//
+    	if(event.data.name){// or if(arguments.lenght < 2) 
+    		//alert('yes');
+    		param = event.data.name;
+    	}else{
+    		//alert('no');
+    		param = nameOfContainer;
+    	};
+    	//
+        $(param).height(window.innerHeight-30);//
+        $(param).width(window.innerWidth-60);//
+    };
+    //-----------------------------
+    //call once on 'ready'
+    $(document).on('ready', {name:mainContainer}, squizeeContainer);
+    //call on each 'resize'
+    $(window).on('resize', {name:mainContainer}, squizeeContainer);
+    //
+    //-----------------------------
+    //
+    
+});//EOF ready

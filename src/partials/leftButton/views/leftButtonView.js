@@ -13,6 +13,7 @@ import LeftButtonModel from "../models/leftButtonModel.js";
 let lbm = new LeftButtonModel();
 
 console.log('from view #1: ', lbm.get('title'));
+console.log('from view #1: ', lbm.get('pushed'));
 //
 //
 //model backbone class
